@@ -108,6 +108,7 @@ acs_vars <- c("B01001_001E", # ACS total Pop estimate
               "B08137_002E", # owner hh
               "B06011_001E") # Median income in past 12 months
 ```
+
 # Tidycensus Call
 
 If you don't know what get_acs is, try ??get_acs

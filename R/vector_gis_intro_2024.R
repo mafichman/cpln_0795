@@ -20,8 +20,8 @@ numeric_object <- 5
 
 vector_object <- c("schwarber", "turner", "harper", "bohm", "realmuto", "castellanos", "stott", "sosa", "rojas")
 
-# To get started we are going to load libraries that we will need to work with more complex data like
-# spatial objects and data-frames (aka spreadsheet type things)
+# To get started we are going to load libraries that we will need to work with more complex data like spatial objects and data-frames (aka spreadsheet type things)...  
+# if you don't have these libraries installed, run install.packages('tidyverse') and install.packages('sf') before running the following:
 
 library(tidyverse)
 library(sf)
@@ -86,7 +86,7 @@ phila_tracts_sf
 st_crs(phila_tracts_sf)
 
 # Let's reproject it to PA State Plane (see spatialreference.org to find the CRS)
-# To keep our environment nice and neat, let's 
+# To keep our environment nice and neat, let's not create a new sf object
 
 phila_tracts_sf <- phila_tracts_sf %>% 
   st_transform(crs = 2272)
@@ -168,12 +168,12 @@ ggplot()+
   theme_minimal()
 
 
-# Challenge # 2 - make a map visualizations by mutating new variables. Create a title, subtitles etc.,
+# Challenge # 3 - make a map visualizations by mutating new variables. Create a title, subtitles etc.,
 # You can also use facets if you want.
 
 
 
-# Challenge # 3 - if time allows:
+# Challenge # 4 - if time allows:
 
 # Try using the viridis and viridisLite packages to create some cooler color ramps with our fill aesthetics
 # Google it and see what you find.
