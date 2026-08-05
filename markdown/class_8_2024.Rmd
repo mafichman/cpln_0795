@@ -133,7 +133,7 @@ Look at each step in the chain - we overwrite `acs2020` by creating a new object
 
 ```{r}
 acs2020 <- acs2020 %>%
-  select(GEOID, NAME, acs_vars) %>%
+  select(GEOID, NAME, all_of(acs_vars)) %>%
   rename(pop = B01001_001E,
          med_inc = B06011_001E,
          blk_tot = C02003_004E,
