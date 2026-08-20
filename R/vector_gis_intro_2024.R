@@ -132,7 +132,7 @@ ggplot()+
     x="Dollars (not inflation adjusted)",
     y="Number of Tracts",
     caption = "Data: American Community Survey 5-year estimates")+
-  theme_bw()
+  theme_minimal()
 
 # Let's make a "facetted" map, comparing variables between majority owner versus majority white vs
 # majority non-white tracts. Facets split data along categorical lines according to some column
@@ -150,7 +150,11 @@ ggplot()+
   theme_bw()
 
 ## Challenge number 2 - make a new variable using mutate and generate a new facetted histogram 
-# for a different variable
+# Borrow the code for making a mutate statement with ifelse from line ~63
+# and write a new piece of code overwriting tracts_with_data like so:
+# tracts_with_data <- tracts_with_data %>%
+# mutate(new_column = ..... )
+# And then paste the ggplot code from line 140, and alter it to use a new facetting variable
 
 # MAKING MAPS
 
